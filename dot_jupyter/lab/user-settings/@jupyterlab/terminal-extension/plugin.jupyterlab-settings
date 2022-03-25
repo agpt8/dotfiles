@@ -1,0 +1,18 @@
+{
+    // Terminal
+    // @jupyterlab/terminal-extension:plugin
+    // Terminal settings.
+    // *************************************
+
+    // Font family
+    // The font family used to render text.
+    "fontFamily": "Cascadia Code PL, JetBrains Mono, Fira Code, Cascadia Code PL",
+
+    // Font size
+    // The font size used to render text.
+    "fontSize": 14,
+
+    // Line height
+    // The line height used to render text.
+    "lineHeight": 1.2
+}

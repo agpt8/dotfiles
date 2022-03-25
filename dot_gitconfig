@@ -1,0 +1,62 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Ayush Gupta
+	email = ayush.gpt8@gmail.com
+	signingkey = 76F9696114986A7D
+[winUpdater]
+	recentlySeenVersion = 2.25.0.windows.1
+[help]
+	autocorrect = 1
+[credential]
+	helper = wincred
+[diff]
+	tool = vsdiffmerge
+[difftool]
+	prompt = true
+[difftool "vsdiffmerge"]
+	cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepBackup = false
+[merge]
+	tool = vsdiffmerge
+	conflictstyle = diff3
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepBackup = false
+	trustExitCode = true
+[core]
+	editor = \"C:\\Users\\ayush\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\Code - Insiders.exe\" --wait
+	autocrlf = true
+	excludesfile = C:\\Users\\ayush\\OneDrive\\Documents\\gitignore_global.txt
+	commitGraph = true
+	longPaths = true
+[color]
+	ui = true
+	status = true
+	interactive = true
+	diff = true
+	branch = true
+	grep = true
+	decorate = true
+	pager = true
+	showBranch = true
+[rerere]
+	enabled = true
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[gui]
+	fontdiff = -family \"Fira Code\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[http]
+	cookiefile = C:/Users/ayush/.gitcookies
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main

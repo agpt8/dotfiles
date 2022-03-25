@@ -1,0 +1,7 @@
+{
+    "editorConfig": {
+        "fontFamily": "Cascadia Code PL, Jetbrains Mono, Fira Code, Cascadia Code PL",
+        "fontSize": 12,
+        "lineHeight": 1.2
+    }
+}

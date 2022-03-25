@@ -1,0 +1,34 @@
+{
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "code_prettify/autopep8": true,
+    "spellchecker/main": true,
+    "toggle_all_line_numbers/main": true,
+    "comment-uncomment/main": true,
+    "code_prettify/code_prettify": true,
+    "latex_envs/latex_envs": false,
+    "hinterland/hinterland": true,
+    "jupyter-js-widgets/extension": true,
+    "execute_time/ExecuteTime": true,
+    "code_font_size/code_font_size": true,
+    "toc2/main": true,
+    "code_prettify/isort": true,
+    "collapsible_headings/main": true,
+    "scroll_down/main": true,
+    "codefolding/main": true
+  },
+  "Notebook": {
+    "Toolbar": true,
+    "Header": true
+  },
+  "latex_envs": {
+    "autoclose": true
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
+  },
+  "scrollDownIsEnabled": true
+}

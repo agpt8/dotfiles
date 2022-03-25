@@ -1,0 +1,2 @@
+C:\Users\ayush\anaconda3\envs\ml
+C:\Users\ayush\anaconda3

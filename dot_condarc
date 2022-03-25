@@ -1,0 +1,8 @@
+channels:
+  - defaults
+  - conda-forge
+  - conda-canary
+ssl_verify: true
+report_errors: true
+env_prompt: ({name})
+channel_priority: strict

@@ -1,0 +1,10 @@
+{
+    "codeCellConfig": {
+        "fontFamily": "Cascadia Code PL, Jetbrains Mono, Fira Code, Cascadia Code PL",
+        "fontSize": 12,
+        "lineHeight": 1.2,
+        "lineNumbers": true,
+        "lineWrap": "on",
+        "codeFolding": true
+    }
+}
