@@ -30,7 +30,7 @@
 	keepBackup = false
 	trustExitCode = true
 [core]
-	editor = \"C:\\Users\\ayush\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\Code - Insiders.exe\" --wait
+	editor = \"C:\\Users\\ayush\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\bin\\code-insiders\" --wait
 	autocrlf = true
 	excludesfile = C:\\Users\\ayush\\OneDrive\\Documents\\gitignore_global.txt
 	commitGraph = true
@@ -60,3 +60,9 @@
 	gpgsign = true
 [init]
 	defaultBranch = main
+[gc]
+	writeCommitGraph = true
+[fetch]
+	writeCommitGraph = true
+[add "interactive"]
+	useBuiltin = true
