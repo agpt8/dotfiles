@@ -35,6 +35,7 @@
 	excludesfile = C:\\Users\\ayush\\OneDrive\\Documents\\gitignore_global.txt
 	commitGraph = true
 	longPaths = true
+	fsmonitor = true
 [color]
 	ui = true
 	status = true
@@ -66,3 +67,5 @@
 	writeCommitGraph = true
 [add "interactive"]
 	useBuiltin = true
+[transfer]
+	credentialsInUrl = warn
