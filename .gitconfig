@@ -1,0 +1,116 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Ayush Gupta
+	email = ayush.gpt8@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMG6FRaq+6kSEDufUKCiK5IS3ZggQNAjMSuiy3CyfQ78
+[help]
+	autocorrect = prompt
+[diff]
+ 	colorMovedWS = allow-indentation-change
+	algorithm = histogram
+	submodule = log
+	colorMoved = default
+	dstPrefix = after
+	srcPrefix = before
+[difftool]
+	prompt = true
+[merge]
+	conflictStyle = zdiff3
+[mergetool]
+	prompt = true
+[core]
+	autocrlf = true
+	excludesfile = ~/.config/git/.gitignore
+	commitGraph = true
+	longPaths = true
+	fsmonitor = true
+	untrackedcache = true
+	pager = delta
+	repositoryFormatVersion = 1
+[color]
+	ui = true
+	status = true
+	interactive = true
+	diff = true
+	branch = true
+	grep = true
+	decorate = true
+	pager = true
+	showBranch = true
+[rerere]
+	enabled = true
+[gui]
+	fontdiff = -family \"Fira Code\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[http]
+	cookiefile = ~/.config/git/.gitcookies
+[commit]
+	gpgsign = true
+	verbose = true
+[init]
+	defaultBranch = main
+[gc]
+	writeCommitGraph = true
+[fetch]
+	writeCommitGraph = true
+	fsckobjects = true
+[add "interactive"]
+	useBuiltin = true
+[transfer]
+	credentialsInUrl = warn
+	fsckobjects = true
+[alias]
+	enforce = push --force-with-lease
+	init = init --object-format=sha256 --ref-format=reftable
+	clone = clone --object-format=sha256 --ref-format=reftable
+	reflog = reflog list
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = ~/.config/git/allowed_signers
+[rebase]
+	updateRefs = true
+	autosquash = true
+[safe]
+	bareRepository = explicit
+[features]
+	manyFiles = true
+[status]
+	showStash = true
+	submoduleSummary = true
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[pull]
+	rebase = merges
+[pack]
+	useBitmapBoundaryTraversal = true
+	allowPackReuse = multi
+[checkout]
+	workers = 10
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[advice]
+	pushAlreadyExists = true
+[push]
+	autosetupremote = false
+	gpgSign = if-asked
+[interactive]
+	diffFilter = delta
+[receive]
+	fsckObjects = true
+[submodule]
+	recurse = true
+[extensions]
+	objectFormat = sha256
+	compatObjectFormat = sha1
+	refStorage = reftable
