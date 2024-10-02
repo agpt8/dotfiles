@@ -9,13 +9,15 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMG6FRaq+6kSEDufUKCiK5IS3ZggQNAjMSuiy3CyfQ78
 [help]
 	autocorrect = prompt
+[credential]
+	helper = wincred
 [diff]
  	colorMovedWS = allow-indentation-change
 	algorithm = histogram
 	submodule = log
 	colorMoved = default
-	dstPrefix = after
-	srcPrefix = before
+	srcPrefix = before 
+	dstPrefix = after 
 [difftool]
 	prompt = true
 [merge]
@@ -29,7 +31,7 @@
 	longPaths = true
 	fsmonitor = true
 	untrackedcache = true
-	pager = delta
+#	pager = delta
 	repositoryFormatVersion = 1
 [color]
 	ui = true
@@ -45,8 +47,6 @@
 	enabled = true
 [gui]
 	fontdiff = -family \"Fira Code\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-[http]
-	cookiefile = ~/.config/git/.gitcookies
 [commit]
 	gpgsign = true
 	verbose = true
@@ -64,14 +64,12 @@
 	fsckobjects = true
 [alias]
 	enforce = push --force-with-lease
-	init = init --object-format=sha256 --ref-format=reftable
-	clone = clone --object-format=sha256 --ref-format=reftable
 	reflog = reflog list
+	init = init --ref-format=reftable --object-format=sha256
+	clone = clone --ref-format=reftable #--object-format=sha256 
+	githist = log --abbrev-commit --oneline $(git merge-base origin/main HEAD)^..HEAD
 [gpg]
 	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-	allowedSignersFile = ~/.config/git/allowed_signers
 [rebase]
 	updateRefs = true
 	autosquash = true
@@ -82,12 +80,6 @@
 [status]
 	showStash = true
 	submoduleSummary = true
-[credential "https://github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
 [pull]
 	rebase = merges
 [pack]
@@ -111,6 +103,10 @@
 [submodule]
 	recurse = true
 [extensions]
-	objectFormat = sha256
 	compatObjectFormat = sha1
 	refStorage = reftable
+	objectFormat = sha256
+[bitmapPseudoMerge "all"]
+	pattern = refs/(heads|tags)/
+	threshold = now
+	stableThreshold = never
