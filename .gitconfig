@@ -70,6 +70,8 @@
 	githist = log --abbrev-commit --oneline $(git merge-base origin/main HEAD)^..HEAD
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [rebase]
 	updateRefs = true
 	autosquash = true
