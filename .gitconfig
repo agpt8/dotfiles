@@ -67,7 +67,6 @@
 [alias]
 	enforce = push --force-with-lease
 	reflog = reflog list
-	init = init --ref-format=reftable --object-format=sha256
 	clone = clone --ref-format=reftable #--object-format=sha256 
 	githist = log --abbrev-commit --oneline $(git merge-base origin/main HEAD)^..HEAD
 [gpg]
