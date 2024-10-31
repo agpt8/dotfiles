@@ -52,6 +52,8 @@
 	verbose = true
 [init]
 	defaultBranch = main
+	defaultRefFormat = reftable
+	defaultObjectFormat = sha256
 [gc]
 	writeCommitGraph = true
 [fetch]
