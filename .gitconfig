@@ -114,3 +114,5 @@
 	pattern = refs/(heads|tags)/
 	threshold = now
 	stableThreshold = never
+[tag]
+	gpgsign = true
