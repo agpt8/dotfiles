@@ -115,3 +115,5 @@
 	stableThreshold = never
 [tag]
 	gpgsign = true
+[remote "origin"]
+	followRemoteHead = warn
